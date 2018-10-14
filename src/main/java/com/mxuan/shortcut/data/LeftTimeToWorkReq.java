@@ -3,7 +3,7 @@ package com.mxuan.shortcut.data;
 import java.util.List;
 
 public class LeftTimeToWorkReq {
-    static class EventInfo {
+    public static class EventInfo {
         String name;
         int time;
 
@@ -34,6 +34,8 @@ public class LeftTimeToWorkReq {
 
     private List<EventInfo> eventInfos;
 
+    private String currentPosition;
+
     public List<EventInfo> getEventInfos() {
         return eventInfos;
     }
@@ -43,6 +45,14 @@ public class LeftTimeToWorkReq {
         return "LeftTimeToWorkReq{" +
                 "eventInfos=" + eventInfos +
                 '}';
+    }
+
+    public String getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public void setCurrentPosition(String currentPosition) {
+        this.currentPosition = currentPosition;
     }
 
     public void setEventInfos(List<EventInfo> eventInfos) {
